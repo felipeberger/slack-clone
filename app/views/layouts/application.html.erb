@@ -12,20 +12,28 @@
   </head>
 
   <body>
-    <section class="flex"> 
-      <nav class="bg-gray-500 p-6 h-screen"> 
-        <p>Threads</p>
-        <p>Mentions and reactions</p>
-        <p>Drafts</p>
 
-        <p>Channels</p>
+    <div class="grid grid-rows-6 grid-flow-col gap-1">
+      <div class="bg-gray-500 row-span-6">
+        <nav class="p-3 h-screen"> 
+          <p>Threads</p>
+          <p>Mentions and reactions</p>
+          <p>Drafts</p>
 
-        <p>Direct messages</p>
-      </nav>
-      
-      <main class="container mx-auto mt-4 px-5 flex">
+          <p>Channels</p>
+
+          <p>Direct messages</p>
+        </nav>
+      </div>
+      <div class="row-span-5 col-span-12">
         <%= yield %>
-      </main>
-    </section>
+      </div>
+      <div class="col-span-12 content-center flex">
+        <div class="p-2 h-5/6 w-full self-center">
+          <textarea class="w-full h-full rounded"></textarea>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
