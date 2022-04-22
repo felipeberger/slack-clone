@@ -12,8 +12,20 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <section class="flex"> 
+      <nav class="bg-gray-500 p-6 h-screen"> 
+        <p>Threads</p>
+        <p>Mentions and reactions</p>
+        <p>Drafts</p>
+
+        <p>Channels</p>
+
+        <p>Direct messages</p>
+      </nav>
+      
+      <main class="container mx-auto mt-4 px-5 flex">
+        <%= yield %>
+      </main>
+    </section>
   </body>
 </html>
