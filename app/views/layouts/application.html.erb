@@ -25,12 +25,11 @@
       </div>
 
       <div class="row-span-5 col-span-12">
-        <p>Chat displayed here</p>
         <div id="messages" class="min-w-full">
-          <%= render @messages %>
+          <%= render "messages/chat_messages", messages: @messages %>
         </div>
       </div>
-      
+
       <div class="col-span-12">
           <%= yield %>
       </div>
