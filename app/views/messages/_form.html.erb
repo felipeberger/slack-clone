@@ -1,5 +1,5 @@
-<%= form_with(model: message, class: "contents") do |form| %>
-  <% if message.errors.any? %>
+<%= form_with(model: message, class: "contents w-full h-full") do |form| %>
+  <% if message && message.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
 
@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="my-5">
-    <%= form.label :content %>
-    <%= form.text_field :content, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  <div class="w-full h-full inline flex mx-2">
+    <%= form.text_area :content, class: "rounded-md border border-gray-200 outline-none w-full my-3" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit :send, class: "rounded-lg py-3 px-5 bg-blue-600 text-white font-medium cursor-pointer mr-1" %>
   </div>
+  
 <% end %>
