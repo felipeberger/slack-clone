@@ -15,7 +15,7 @@
 
     <div class="grid grid-rows-6 grid-flow-col gap-1 h-screen">
       <div class="bg-gray-500 row-span-6">
-        <nav class="p-3"> 
+        <nav class="pl-3 pt-3 text-white font-bold"> 
           <p>Threads</p>
           <p>Mentions and reactions</p>
           <p>Drafts</p>
@@ -24,7 +24,7 @@
         </nav>
       </div>
 
-      <div class="row-span-5 col-span-12 overflow-auto">
+      <div class="row-span-5 col-span-12 overflow-auto pl-3">
         <div id="messages" class="min-w-full">
           <%= render "messages/chat_messages", messages: @messages %>
         </div>
