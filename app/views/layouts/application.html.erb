@@ -13,9 +13,9 @@
 
   <body>
 
-    <div class="grid grid-rows-6 grid-flow-col gap-1 h-screen">
+    <div class="sidebar grid grid-rows-6 grid-flow-col gap-1 h-screen">
       <div class="bg-gray-500 row-span-6">
-        <nav class="pl-3 pt-3 text-white font-bold"> 
+        <nav class="pl-3 pt-3 pr-2 text-white font-bold"> 
           <p>Threads</p>
           <p>Mentions and reactions</p>
           <p>Drafts</p>
@@ -24,13 +24,13 @@
         </nav>
       </div>
 
-      <div class="row-span-5 col-span-12 overflow-auto pl-3">
+      <div class="chat-messages row-span-5 col-span-12 overflow-auto pl-3">
         <div id="messages" class="min-w-full">
           <%= render "messages/chat_messages", messages: @messages %>
         </div>
       </div>
 
-      <div class="col-span-12">
+      <div class="text-area col-span-12">
           <%= yield %>
       </div>
     </div>
