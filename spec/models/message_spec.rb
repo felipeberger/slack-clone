@@ -10,4 +10,8 @@ RSpec.describe Message, type: :model do
     expect(Message.new(content: "test")).to be_valid
   end
 
+  describe 'associations' do
+    it { should belong_to(:user).without_validating_presence }
+  end
+
 end
