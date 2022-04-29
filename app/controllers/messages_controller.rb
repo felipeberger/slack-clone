@@ -22,7 +22,7 @@ class MessagesController < ApplicationController
 
   # POST /messages or /messages.json
   def create
-    @message = Message.new(message_params)
+    @message = current_user.messages.new(message_params)
 
     respond_to do |format|
       if @message.save
