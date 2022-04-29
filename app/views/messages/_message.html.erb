@@ -1,6 +1,14 @@
 <div id="<%= dom_id message %>">
-  <p class="my-3">
-    <p><b><%= message.user.first_name %></b></p>
-    <p><%= message.content %></p>
-  </p>
+
+  <% if user == @current_user.first_name %>
+    <div class="my-3 text-right"> 
+      <p><b><%= message.user.first_name %></b></p>
+      <p><%= message.content %></p>
+    </div>
+  <% else %>
+    <div class="my-3"> 
+      <p><b><%= message.user.first_name %></b></p>
+      <p><%= message.content %></p>
+    </div>
+  <% end %>
 </div>
