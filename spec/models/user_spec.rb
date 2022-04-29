@@ -11,4 +11,8 @@ RSpec.describe User, type: :model do
     it { should have_many(:messages) }
   end
 
+  it 'returns associated messages' do
+    expect(@user.messages).not_to be_nil
+  end
+
 end
